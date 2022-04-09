@@ -49,14 +49,14 @@ function renderAvatar(user) {
     // 1.获取头像名称
     var name = user.nickname || user.username
         // 2.渲染用户名称
-    $('.welcome').html('欢迎&nbsp;&nbsp' + name).show()
+    $('#welcome').html('欢迎&nbsp;&nbsp' + name)
         //3渲染用户头像
         //判断用户的头像是否为null
 
     if (user.user_pic !== null) {
         // 3.1 如果不为空则渲染用户图片头像
-        $('.text-avatar').hide()
         $('.layui-nav-img').attr('src', user.user_pic).show()
+        $('.text-avatar').hide()
     } else {
         //3.2为空 则渲染用户名首字母文字头像
         $('.layui-nav-img').hide()
